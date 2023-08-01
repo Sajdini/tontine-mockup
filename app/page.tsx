@@ -4,12 +4,17 @@ import { getLandingPage } from "@/sanity/sanity-utils";
 
 const Home = async () => {
   const landingPage = await getLandingPage();
-  console.log(landingPage);
+
+  const sections = landingPage[0]?.sections || [];
   return (
     <>
-      <div>{landingPage[0]?.title}</div>
-      <Cta />
-      <Info />
+      {sections.map((section) =>
+        section?._type === "section-cta" ? (
+          <Cta key={section._id} cta={section} />
+        ) : (
+          <Info key={section._id} info={section} />
+        )
+      )}
     </>
   );
 };

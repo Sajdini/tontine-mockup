@@ -1,14 +1,21 @@
-import { getProjects } from '@/sanity/sanity-utils'
-import React from 'react'
+import Project from "@/components/project/Project";
+import { getProjects } from "@/sanity/sanity-utils";
+import "./page.css";
+const Projects = async () => {
+  const projects = await getProjects();
 
-const Projects= async() => {
-
-  const projects=await getProjects()
-  console.log(projects)
   return (
-    <div>is there something {projects[0]?.title}</div>
-  )
-}
+    <section className="project-section">
+      <div className="project-items-container">
+        <h1 className="section-title">My projects</h1>
+        <div className="projects-flex_container">
+          {projects.map((project, index) => (
+            <Project key={index} project={project} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
-export default Projects
-
+export default Projects;

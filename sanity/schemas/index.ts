@@ -1,10 +1,9 @@
+import page from "./pages-schema";
 import ctaSection from "./ctaSection-schema";
 import infoSection from "./infoSection-schema";
 import landingPage from "./landingPage-schema";
-import project from "./project-schema"
+import project from "./project-schema";
 
+const schemas = [landingPage, ctaSection, infoSection, project, page];
 
-
- const schemas=[landingPage,ctaSection, infoSection,project ];
-
- export default schemas;
+export default schemas;
