@@ -26,8 +26,6 @@ const Products = () => {
     });
   }, [data, debouncedSearchValue]);
 
-  console.log(searchedValue, filteredData);
-
   ///sorting data by price
   const sortedData = () => {
     const dataToBeSorted = debouncedSearchValue ? filteredData : data.products;
@@ -38,6 +36,7 @@ const Products = () => {
 
     return sortedProducts;
   };
+
   const toggleSort = () => {
     setIsAscending((prevIsAscending) => !prevIsAscending);
   };
@@ -48,7 +47,6 @@ const Products = () => {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
-          // Add any other headers you might need, e.g., authorization token
         },
       });
 
@@ -56,9 +54,11 @@ const Products = () => {
         throw new Error("Delete request failed");
       }
 
-      console.log("Product deleted successfully");
+      /// Deleting a product will not delete it into the server. - as written in the dummyjson docs. Therefore there is only an alert, showing whether the response is ok.
+
+      alert("Product deleted successfully");
     } catch (error) {
-      console.error("Error deleting product:", error.message);
+      alert("Error deleting product");
     }
   };
 

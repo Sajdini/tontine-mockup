@@ -11,7 +11,7 @@
 }
 .section-title {
   font-size: 5.2rem;
-  margin: 0 0 5rem;
+  margin: 0 0 5rem 7rem;
 }
 
 .projects-flex_container {
@@ -21,4 +21,11 @@
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
+}
+
+@media (max-width: 28.125em) {
+  .section-title {
+    text-align: center;
+    margin-left: 0;
+  }
 }

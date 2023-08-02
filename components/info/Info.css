@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-inline: 1rem;
 }
 
 .info-items__container {
@@ -43,4 +44,24 @@
 
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media (max-width: 47.5em) {
+  .info-section {
+    height: unset;
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .info-image {
+    align-self: center;
+  }
+}
+
+@media (max-width: 28.125em) {
+  .info-section {
+    text-align: center;
+  }
 }

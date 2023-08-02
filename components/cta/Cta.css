@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-inline: 1rem;
 }
 
 .cta-items__container {
@@ -35,4 +36,17 @@
 .cta-link:hover {
   background-color: black;
   color: #ccc;
+}
+
+@media (max-width: 47.5em) {
+  .cta-section {
+    height: unset;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 28.125em) {
+  .cta-section {
+    text-align: center;
+  }
 }
