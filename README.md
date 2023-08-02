@@ -22,7 +22,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 - pages/: Contains the Next.js pages, representing the different routes of the application.
 - components/: Contains reusable components used across the application.
-- styles/: Holds global styles and CSS modules.
 - sanity/: Contains Sanity configurations and schemas.
 
 ## Technologies Used
