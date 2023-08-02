@@ -1,16 +1,10 @@
 type Project = {
-    _id: string;
-    _type: 'project';
-    title: string;
-    stack: string[];
-    image: {
-      _type: 'image';
-      asset: {
-        _ref: string;
-        _type: 'reference';
-      };
-    };
-    link: string;
-  }
+  _id: string;
+  _type: "project";
+  title: string;
+  stack: string[];
+  image: string;
+  link: string;
+};
 
-  export default Project
+export default Project;

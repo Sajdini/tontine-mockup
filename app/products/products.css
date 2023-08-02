@@ -1,0 +1,67 @@
+.products-section {
+  width: 100%;
+  padding-bottom: 10rem;
+}
+
+.grid-container {
+  padding-inline: 2rem;
+  margin: 0 auto;
+  max-width: 130rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 300px));
+  grid-gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-and-sort {
+  max-width: 95rem;
+  margin: 5rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.sorter {
+  max-width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  flex: 1;
+  align-self: center;
+}
+
+.sorter p {
+  margin: 0;
+  color: #000;
+  font-size: 2rem;
+  user-select: none;
+}
+
+.sorter:hover {
+  background-color: #000;
+}
+
+.sorter:hover > * {
+  color: #fff;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.search-form input {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.search-form input:focus {
+  outline: none;
+}
